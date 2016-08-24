@@ -19,7 +19,7 @@ var handlebars = require('gulp-compile-handlebars');
 var srcDir = '../JSLib/src/';
 var destDir = './lib/';
 
-var fileNames     = [ '*.js'];
+var fileNames     = ['cache-source.js', 'odata-gml.js', 'utils.js', 'odata-json-light.js', 'datajs.js', 'cache.js', 'deferred.js', 'odata.js', 'odata-batch.js', 'odata-handler.js', 'odata-utils.js', 'odata-xml.js', 'odata-metadata.js', 'odata-json.js', 'odata-atom.js', 'odata-net.js', 'store-dom.js', 'store-indexeddb.js', 'store-memory.js', 'store.js', 'xml.js'];
 
 buildMinify('', fileNames);
 
@@ -32,9 +32,12 @@ function buildMinify(extn, fileNames, destName) {
   var destName = 'datajs' + extn + '.js'
   var minName = 'datajs' + extn + '.min.js'
   gulp.task('minify' + extn, function() {
-    return gulp.src( mapPath(srcDir, fileNames))
+    var files = ['init.js'];
+    files = files.concat(mapPath(srcDir, fileNames));
+
+    return gulp.src(files)
       .pipe(newer(destDir + destName))
-      .pipe(concat(destName,  {newLine: ';'}))
+      .pipe(concat(destName,  {newLine: "\n"}))
       .pipe(gulp.dest(destDir))
       .pipe(uglify())
       .pipe(rename(minName))
