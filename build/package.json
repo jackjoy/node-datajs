@@ -1,5 +1,5 @@
 {
-  "name": "node-datajs",
+  "name": "odata-datajs",
   "version": "1.1.2",
   "description": "",
   "main": "index.js",
@@ -25,7 +25,14 @@
     "type": "git",
     "url": "https://github.com/metavine/node-datajs.git"
   },
+  "maintainers": [
+    {
+      "name": "Eric Tang",
+      "email": "etang@metavine.com"
+    }
+  ],
   "keywords": [
+    "Microsoft",
     "datajs",
     "odata",
     "v2",
