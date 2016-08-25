@@ -15,7 +15,7 @@
 // This object verifies the operation of the cache.
 // Internally it maintains a simple model of the cache implemented using a lookup array of the expected cached pages.
 
-(function (window, undefined) {
+(function (global, undefined) {
 
     var CacheOracle = function (baseUri, pageSize, total) {
         /// <summary>Creates a new CacheOracle</summary>

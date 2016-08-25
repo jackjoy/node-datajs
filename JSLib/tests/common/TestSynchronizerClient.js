@@ -14,7 +14,7 @@
 // TestSynchronizer Client
 // Use to log assert pass/fails and notify mstest a test has completed execution
 
-(function (window, undefined) {
+(function (global, undefined) {
     var testRunId = "";
     var serviceRoot = "./common/TestLogger.svc/";
     var recording = null;

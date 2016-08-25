@@ -13,7 +13,7 @@
 
 // Client for the odata.read oracle service
 
-(function (window, undefined) {
+(function (global, undefined) {
     var jsonMime = "application/json;odata=verbose";
     var universalMime = "*/*";
     var atomMime = "application/atom+xml";

@@ -19,7 +19,7 @@
 
 // odata-atom-tests.js
 
-(function (window, undefined) {
+(function (global, undefined) {
 
     module("Unit");
 

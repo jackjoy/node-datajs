@@ -28,7 +28,7 @@
 // Requests and responses are then recorded in session.requests and session.responses. Session can be ended by session.end().
 // Multiple simultaneous sessions are supported.
 
-(function (window, undefined) {
+(function (global, undefined) {
 
     var ObservableHttpClient = function (provider) {
         this.provider = provider ? provider : OData.defaultHttpClient;

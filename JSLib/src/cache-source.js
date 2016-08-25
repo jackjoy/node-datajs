@@ -15,7 +15,7 @@
 
 // cache-source.js
 
-(function (window, undefined) {
+(function (global, undefined) {
 
     var datajs = window.datajs || {};
     var odata = window.OData || {};

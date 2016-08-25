@@ -19,7 +19,28 @@ var handlebars = require('gulp-compile-handlebars');
 var srcDir = '../JSLib/src/';
 var destDir = './lib/';
 
-var fileNames     = ['cache-source.js', 'odata-gml.js', 'utils.js', 'odata-json-light.js', 'datajs.js', 'cache.js', 'deferred.js', 'odata.js', 'odata-batch.js', 'odata-handler.js', 'odata-utils.js', 'odata-xml.js', 'odata-metadata.js', 'odata-json.js', 'odata-atom.js', 'odata-net.js', 'store-dom.js', 'store-indexeddb.js', 'store-memory.js', 'store.js', 'xml.js'];
+var fileNames     = ['datajs.js', 
+                    'utils.js', 
+                    'deferred.js', 
+                    'xml.js',
+                    'odata-utils.js', 
+                    'odata-handler.js', 
+                    'odata-xml.js', 
+                    'odata-gml.js', 
+                    'odata-json-light.js', 
+                    'odata-metadata.js', 
+                    'odata-batch.js', 
+                    'odata-json.js', 
+                    'odata-atom.js', 
+                    'odata-net.js', 
+                    'odata.js',
+                    'cache-source.js',
+                    'cache.js', 
+                    'store-dom.js', 
+                    'store-indexeddb.js', 
+                    'store-memory.js', 
+                    'store.js', 
+                    ];
 
 buildMinify('', fileNames);
 
@@ -34,6 +55,7 @@ function buildMinify(extn, fileNames, destName) {
   gulp.task('minify' + extn, function() {
     var files = ['init.js'];
     files = files.concat(mapPath(srcDir, fileNames));
+    files.push('exports.js');
 
     return gulp.src(files)
       .pipe(newer(destDir + destName))

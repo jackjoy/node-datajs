@@ -15,7 +15,7 @@
 
 // deferred.js
 
-(function (window, undefined) {
+(function (global, undefined) {
 
     // CONTENT START
 

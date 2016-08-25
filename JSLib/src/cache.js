@@ -15,7 +15,7 @@
 
 // cache.js
 
-(function (window, undefined) {
+(function (global, undefined) {
 
     var datajs = window.datajs || {};
 
